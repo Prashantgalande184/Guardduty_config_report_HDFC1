@@ -1,8 +1,10 @@
-﻿import { useMemo, useState, useEffect } from "react";
+﻿// src/App.jsx
+import { useMemo, useState, useEffect } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
 import { FaRocket } from "react-icons/fa";
 import './App.css'; // Ensure App.css is included
+import VideoBackground from './VideoBackground'; // Import the new video background component
 
 const RAW_API_BASE = import.meta.env.VITE_API_BASE;
 const API_KEY = import.meta.env.VITE_API_KEY;
@@ -249,6 +251,8 @@ export default function App() {
 
   return (
     <div className="page">
+      <VideoBackground /> {/* Add the video background here */}
+
       <motion.div
         className="card"
         initial={{ opacity: 0, y: -50 }}
@@ -258,7 +262,7 @@ export default function App() {
         <div className="logo-container">
           <img
             className="logo"
-            src="/AutomateX_logo.png"  // Adjust this for the correct logo path
+            src="/AutomateX_logo.png"
             alt="AutomateX Logo"
           />
         </div>

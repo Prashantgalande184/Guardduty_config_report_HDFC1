@@ -257,4 +257,35 @@ body {
   .clearButton {
     margin-right: 12px;
   }
+
+/* Ensure video background adjusts well across devices */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
+
+.page {
+  position: relative;
+  z-index: 1; /* Ensure the content is on top of the video */
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+}
+
+#background-video {
+  object-fit: cover; /* Ensures the video fills the screen */
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  /* Optional: Add styles for smaller screens if needed */
+  #background-video {
+    object-position: center center;
+  }
+}
+}
+
