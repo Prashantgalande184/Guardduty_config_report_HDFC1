@@ -1,10 +1,9 @@
-﻿// src/App.jsx
-import { useMemo, useState, useEffect } from "react";
+﻿import { useMemo, useState, useEffect } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
 import { FaRocket } from "react-icons/fa";
-import './App.css'; // Ensure App.css is included
-import VideoBackground from './VideoBackground'; // Import the new video background component
+import "./App.css";
+import VideoBackground from "./VideoBackground";
 
 const RAW_API_BASE = import.meta.env.VITE_API_BASE;
 const API_KEY = import.meta.env.VITE_API_KEY;
@@ -251,7 +250,7 @@ export default function App() {
 
   return (
     <div className="page">
-      <VideoBackground /> {/* Add the video background here */}
+      <VideoBackground />
 
       <motion.div
         className="card"
